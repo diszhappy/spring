@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import in.diszhappy.entiry.Employee;
@@ -52,6 +54,17 @@ public class EmployeeService {
 		repository.findAll().forEach(employees::add);
 		return employees;
 	}
+	
+	/**
+	 * 
+	 * This method is written by Saumm on 17-Jul-2017 1:31:29 AM
+	 * Desc : This method will fetch employee by name
+	 * @return
+	 */
+	public Employee findByName(String name){
+		return repository.findByName(name);
+	}
+	
 	/**
 	 * 
 	 * This method is written by Saumm on 17-Jul-2017 1:31:41 AM

@@ -59,6 +59,18 @@ public class EmployeeController {
 	}
 	/**
 	 * 
+	 * This method is written by Saumm on 17-Jul-2017 8:33:36 AM
+	 * Desc : This method will fetch the employee by name
+	 * @param name
+	 * @return
+	 */
+	@RequestMapping(method=RequestMethod.GET,value="/find/{name}")
+	public Employee findEmployee(@PathVariable String name){
+		return  service.findByName(name);
+		
+	}
+	/**
+	 * 
 	 * This method is written by Saumm on 17-Jul-2017 1:33:41 AM
 	 * Desc : This method will be used to delete an employee based on its id
 	 * @param id
