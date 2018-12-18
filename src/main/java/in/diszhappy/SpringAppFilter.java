@@ -13,11 +13,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 @Component
-public class MyCORSFilter implements Filter {
+public class SpringAppFilter implements Filter {
 
-private final Logger log = LoggerFactory.getLogger(MyCORSFilter.class);
+private final Logger log = LoggerFactory.getLogger(SpringAppFilter.class);
 
-public MyCORSFilter() {
+public SpringAppFilter() {
     log.info("SimpleCORSFilter init");
 }
 
